@@ -1,0 +1,9 @@
+<view class='progress-bar'>
+  <view class='left'>
+  任务截止时间：<i-count-down target="{{targetTime}}" clear-timer="{{clearTimer}}"></i-count-down>
+  </view>
+  <view class='right'>
+  获得进度：<text>{{percent}}/100</text>
+  </view>
+</view>
+<i-progress percent="{{percent}}" hide-info></i-progress>

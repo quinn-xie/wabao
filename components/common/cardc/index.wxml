@@ -1,0 +1,19 @@
+<view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+    <view class="i-class i-card-header" bindtap='toDetails'>
+        <view class="i-card-header-content">
+            <image class="i-card-header-thumb" src="{{ thumb }}" mode="widthFit" wx:if="{{ thumb }}" />
+            <view class='i-card-header-title'>
+                <view class='i-card-title'>{{title}}</view>
+                <!-- 倒计时未完成或是进度未完成 -->
+                <view class='i-card-subtitle'>
+                  兑换所需金币:{{needCost}}
+                </view>
+            </view>
+        </view>
+        <!--  -->
+        <view class="i-card-header-extra">
+          <view class='receiveBtn' wx:if="{{!available}}" bindtap='onTapView'>兑换</view>
+          <view class='unreceiveBtn' wx:if="{{available}}">兑换</view>
+        </view>
+    </view>
+</view>

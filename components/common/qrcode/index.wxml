@@ -1,0 +1,1 @@
+<canvas class='canvas' canvas-id='canvas' style="width:{{width}}rpx; height:{{height}}rpx;"></canvas>

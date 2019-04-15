@@ -1,0 +1,41 @@
+<!-- 底层背景 -->
+<view class="bg">
+  <image src="../../images/common/detailbg@2x.jpg" mode="widthFix"></image>
+</view>
+<!-- BANNER -->
+<view class='box banner-box'>
+  <banner imgUrl="../../../images/temporary/test.jpg" bannerTitle="爱奇艺会员卡（30天）"></banner>
+</view> 
+<!-- 充值激活输入窗口 -->
+<view class="box" wx:if="{{!isActive}}">
+  <view class='list'>
+    <i-input value="{{ tel }}" type="number" placeholder="请输入激活手机号码" maxlength="11" bind:change="setPhone" bind:blur='blurPhone'/>
+  </view>
+  <view class='list'>
+    <view class="code"><i-input value="{{ code }}" type="number" bind:change="setCode" placeholder="请输入验证码"/></view>
+    <view class="btn"><i-button bind:click="sendCodeClick" type="warning" size="large" disabled="{{sendCodeBtnDisabled}}">{{sendCode}}</i-button></view>
+  </view>
+</view>
+<!-- 充值激活成功窗口 -->
+<view class="box" wx:if="{{isActive}}">
+  <view class='list'>
+    <i-input value="{{ account }}" type="number" title="会员账号" disabled/>
+    <i-input value="{{ password }}" type="number" title="会员密码" disabled/>
+  </view>
+</view>
+<!-- 按钮组 -充值激活 -->
+<view class='box btn-box'>
+<i-button wx:if="{{!isActive}}" bind:click="activateCardClick" type="error" shape="circle" size="large">立即激活</i-button>
+<i-button wx:if="{{isActive}}" bind:click="inviteFriendClick" type="error" shape="circle" size="large">邀请好友哇宝</i-button>
+  <i-button bind:click="handleClick" type="warning" shape="circle" size="large">转赠好友</i-button>
+  <i-button bind:click="handleClick" type="ghost" shape="circle" size="large">放弃宝贝</i-button>
+</view>
+<!-- 使用说明 -->
+<view class='box explain-box'>
+  <view>使用说明：</view>
+  <view>这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明</view>
+</view>
+<!-- 推荐宝物 -->
+<recommend></recommend>
+<!-- 警告提示 -->
+<i-message id="message" />

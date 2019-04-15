@@ -1,0 +1,65 @@
+<!-- 底层背景 -->
+<view class='home-bg'>
+  <image src="../../images/home/bg@2x.png" mode='widthFix'></image>
+</view>
+<!-- 哇宝公仔 -->
+<view class='wabaotoy' style='animation-duration:.{{animationTime}}s'>
+  <image src="../../images/home/wabaotoy@2x.png" mode='widthFix'></image>
+</view>
+<!-- 矿山背景 -->
+<view class='kuangshan-bg'>
+  <image src="../../images/home/kuangshanbg@2x.png" mode='widthFix'></image>
+</view>
+<!-- 我的金币矿石  -->
+<view class='my-info'>
+  <my-coins></my-coins>
+</view>
+<!-- 滚动文字 -->
+<view class='scroll-text'>
+  <!-- 上下逐条滚动 -->
+  <!-- <swiper-text></swiper-text> -->
+  <!-- 左右一起横向滚动 -->
+  <notice-bar loop speed="2000">{{notice}}</notice-bar>
+</view>
+<!-- 我的宝库 -->
+<view class='my-treasure' style='bottom:{{myTreasureBottom}}px'>
+  <view class='my-treasure-title'>
+    <view class='up-icon'>
+      <image src="../../images/home/up@2x.png" mode='widthFix' bindtap="showTreasure" wx-if="{{treasureArrowUp}}"></image>
+      <image src="../../images/home/down@2x.png" mode='widthFix' bindtap="hideTreasure" wx-if="{{!treasureArrowUp}}"></image>
+      <tips-icon num="{{treasureNum}}" show="{{treasureNumIsTrue}}"></tips-icon>
+    </view>
+    <text>我的宝库</text>
+    <view class='my-treasure-content' style="height:{{myTreasureContentHeight}}px">
+      <my-treasure scrollAreaHeight="{{scrollAreaHeight}}"></my-treasure>
+    </view>
+  </view>
+
+</view>
+<!-- 右侧工具栏 -->
+<view class='toolbar'>
+  <toolbar messageNum="{{messageNum}}" messageNumShow="{{messageNumShow}}" jiasuNum="{{jiasuNum}}" jiasuNumShow="{{jiasuNumShow}}" kuangshanNum="{{kuangshanNum}}"></toolbar>
+</view>
+
+<!-- 离线收益弹出层 -->
+<i-modal visible="{{ outlinePop }}" slotHeight="580" titleTitleStyleB title="离线收益">
+  <view class='pop-content'>
+    <view class='outline-title'>欢迎回来！您的挖宝矿工在您离线期间，为您挖得:</view>
+    <view class='list-item'>
+      <list-item typeA iconA="../../../images/common/popIcon-kuangshi@2x.png" numA="9999"></list-item>
+      <list-item typeA iconA="../../../images/common/popIcon-jinbi@2x.png" numA="888"></list-item>
+      <list-item typeA iconA="../../../images/common/popIcon-baohe@2x.png" numA="66"></list-item>
+    </view>
+  </view>
+</i-modal>
+
+<!-- 优惠券弹出层 -->
+<view class="mask {{ couponPopShow ? 'show' : '' }}"></view>
+<view class="coupon-pop {{ couponPopShow ? 'show' : '' }}">
+  <view class="pop-content">
+    <image class='close-icon' mode="widthFix" src="../../images/common/popIcon-close@2x.png" bindtap="closeCouponPop"></image>
+    <image src="../../images/temporary/test.jpg" mode="widthFix"></image>
+    <view class="title">肯德基全家桶30元优惠券 </view>
+    <view class="btn">立即领取</view>
+  </view>
+</view>

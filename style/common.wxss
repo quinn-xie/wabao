@@ -1,0 +1,5 @@
+/*IMAGE*/
+image{max-width:100%;max-height:100%;}
+
+/*PAGE*/
+page{font-family:-apple-system-font,Helvetica Neue,Helvetica,sans-serif;}

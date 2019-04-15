@@ -1,0 +1,25 @@
+.tips-icon{
+  padding:8rpx;
+  width:30rpx;
+  height:30rpx;
+  border-radius:100%;
+  background:#ff0000;
+  display: inline-block;
+  position: relative;
+  font-size:20rpx;
+  color:#ffffff;
+  text-align: center;
+  z-index: 1
+}
+.tips-icon::after{
+  content:'';
+  display: inline;
+  position:absolute;
+  left:-10rpx;
+  bottom: -2rpx;
+  border-width:0 18rpx 18rpx;
+  border-style:solid;
+  border-color:transparent transparent #ff0000;
+  transform: rotate(225deg);
+  z-index: 0
+}

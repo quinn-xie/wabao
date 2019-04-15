@@ -1,0 +1,18 @@
+.progress-bar{
+  width:100%;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.progress-bar .left{
+  color:rgba(255, 86, 38, 1);
+  float:left;
+  display: inline-block;
+}
+.progress-bar .right{
+  color:rgba(148, 69, 9, 1);
+  float:right;
+  display: inline-block;
+}
+.progress-bar .right text{
+  font-size: 32rpx;
+}

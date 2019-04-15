@@ -1,0 +1,19 @@
+<!-- 消息 -->
+<view class="toolbar message"  bindtap='messageTap'>
+  <image src='../../images/home/xiaoxi@2x.png' mode='widthFix'></image>
+  <tips-icon num="{{messageNum}}" show="{{messageNumShow}}"></tips-icon>
+</view>
+<!-- 矿山 -->
+<view class="toolbar kuangshan"  bindtap='kuangshanTap'>
+  <image src='../../images/home/kuangshan@2x.png' mode='widthFix'></image>
+  <text>{{kuangshanNum}}</text>
+</view>
+<!-- 加速 -->
+<view class="toolbar jiasu" bindtap='jiasuTap'>
+  <image src='../../images/home/jiasu@2x.png' mode='widthFix'></image>
+  <tips-icon num="{{jiasuNum}}" show="{{jiasuNumShow}}"></tips-icon>
+</view>
+<!-- 客服 -->
+<view class="toolbar kefu" bindtap='serviceTap'>
+  <image src='../../images/home/kefu@2x.png' mode='widthFix'></image>
+</view>

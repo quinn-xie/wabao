@@ -1,0 +1,4 @@
+<view class='banner'>
+  <view class='banner-img'><image src='{{imgUrl}}' mode='widthFix'></image></view>
+  <view class='banner-title'>{{bannerTitle}}</view>
+</view>

@@ -1,0 +1,179 @@
+page {
+  background:rgba(239, 159, 75, 1);
+  overflow: hidden;
+} 
+.home-bg{
+  width: 100%;
+  position: fixed;
+  top:-50px;
+  left:0;
+  z-index:-100;
+}
+.wabaotoy{
+  width:270rpx;
+  position: absolute;
+  left:50%;
+  margin-left:-135rpx;
+  top:250rpx;
+  z-index:-100;
+  animation: toyAnimate infinite;
+}
+.kuangshan-bg{
+  width: 100%;
+  position: absolute;
+  top:570rpx;
+  left:0;
+  z-index:-100;
+}
+.home-bg image,.kuangshan-bg image,.wabaotoy image{
+  width:100%;
+}
+.my-treasure{
+  position:absolute;
+  transition: all .5s;
+  width:100%;
+}
+.my-treasure-title{
+  width: 114%;
+  height:65px;
+  background:#FCF8E8;
+  position: absolute;
+  left:-7%;
+  border-radius: 800% 800% 0 0;
+  text-align: center;
+  z-index:10;
+}
+.my-treasure-title .up-icon{
+  width:100rpx;
+  height:100rpx;
+  position:absolute;
+  top:-50rpx;
+  left:50%;
+  margin-left:-50rpx;
+}
+.my-treasure-title .up-icon tips-icon{
+  position:absolute;
+  right:-8rpx;
+  top:-15rpx;
+}
+.my-treasure-title .up-icon image{
+  width: 100%;
+}
+.my-treasure-title text{
+  font-size: 38rpx;
+  color:#944509;
+  display:inline-block;
+  margin-top:60rpx;
+}
+.my-treasure-content{
+  background:#FCF8E8;
+  width: 100%;
+  text-align: center;
+  padding-top:10px;
+}
+.scroll-text{
+  width: 92%;
+  margin-left:4%;
+  position: absolute;
+  bottom:240rpx;
+}
+.my-info{
+  width: 92%;
+  margin-left:4%;
+}
+.toolbar{
+  position:absolute;
+  right:200rpx;
+  top:250rpx;
+}
+.outline-title{
+  text-align: left;
+  font-size: 36rpx;
+  color:#944509;
+  font-weight: normal;
+}
+.pop-content{
+  width:100%;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.coupon-pop {
+  position: fixed;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  outline: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  transform: translateZ(1px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+.pop-content{
+  width:80%;
+  border-radius: 20rpx;
+  padding:20rpx;
+  box-sizing: border-box;
+  background:#ffffff;
+  position: relative;
+}
+.pop-content .close-icon{
+  width:76rpx;
+  position:absolute;
+  right:0rpx;
+  top:-90rpx;
+  box-shadow:none;
+}
+.pop-content image{
+  width:100%;
+  border-radius:20rpx;
+  box-shadow:0rpx 5rpx 15rpx rgba(255, 85, 38, .5);
+}
+.pop-content .title{
+  width:100%;
+  font-size: 40rpx;
+  color:rgba(148, 69, 9, 1);
+  margin:40rpx 0;
+}
+.pop-content .btn{
+  width:100%;
+  font-size: 32rpx;
+  color:#ffffff;
+  background:-webkit-linear-gradient( top,#FF5526,#FF8426);
+  text-align: center;
+  margin:20rpx 0 50rpx 0;
+  padding:20rpx 0;
+  border-radius: 50rpx;
+  box-shadow:0rpx 5rpx 15rpx rgba(255, 85, 38, .5);
+}
+@keyframes toyAnimate{
+  from{
+      top:250rpx
+  }to{
+      top:260rpx
+  }
+}

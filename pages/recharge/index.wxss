@@ -1,0 +1,57 @@
+page {
+  background: #fcf8e8;
+}
+
+.bg {
+  width: 100%;
+  position: absolute;
+  z-index: -100;
+}
+
+.bg image {
+  width: 100%;
+}
+
+.box {
+  width: 90%;
+  margin: 20rpx auto;
+}
+
+.banner-box {
+  margin: 0 auto;
+  padding-top: 60rpx;
+}
+
+.btn-box {
+  width: 75%;
+  margin: 80rpx auto;
+}
+
+.explain-box {
+  color: rgba(156, 84, 32, 1);
+  font-size: 18rpx;
+  margin: 40rpx auto;
+}
+
+.explain-box .title {
+  font-size: 24rpx;
+}
+
+.list {
+  width: 100%;
+  margin: 20rpx auto;
+}
+.list::after{
+ content:'';
+ clear: both;
+ display: block;
+ visibility: hidden;
+}
+.list .code{
+  width: 60%;
+  float: left;
+}
+.list .btn{
+  width: 35%;
+  float:right;
+}

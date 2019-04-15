@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#ff9f58",
+  "navigationBarTitleText": "哇宝",
+  "usingComponents": {
+    "i-button":"../../components/common/button/index",
+    "banner": "../../components/common/banner/index",
+    "recommend": "../../components/recommend/recommend",
+    "i-input": "../../components/common/input/index",
+    "i-message": "../../components/common/message/index"
+  }
+}

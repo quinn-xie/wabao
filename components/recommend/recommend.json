@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-divider": "../common/divider/index",
+    "i-cardc": "../common/cardc/index"
+  }
+}

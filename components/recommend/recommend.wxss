@@ -1,0 +1,7 @@
+.recommend{
+  width:100%;
+}
+.recommend .title{
+  margin:30rpx auto;
+  width:60%;
+}

@@ -1,0 +1,34 @@
+.toolbar{
+  width:200rpx;
+  position: absolute;
+}
+.toolbar image{
+  width:100%;
+}
+.toolbar tips-icon{
+  position: absolute;
+  top:20rpx;
+  right:30rpx
+}
+.message{
+  top:0;
+}
+.kuangshan{
+  top:160rpx;
+}
+.kuangshan text{
+  position: absolute;
+  top:36rpx;
+  right:36rpx;
+  font-size:22rpx;
+  color:#ffffff;
+}
+.jiasu{
+  top:320rpx;
+}
+.kefu{
+  top:480rpx;
+}
+.kuangshan image{
+  width:117%
+}

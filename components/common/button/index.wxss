@@ -1,0 +1,112 @@
+.i-btn {
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    white-space: nowrap;
+    user-select: none;
+    font-size: 32rpx;
+    border-radius: 2rpx;
+    border: 0 !important;
+    position: relative;
+    text-decoration: none;
+    height: 88rpx;
+    line-height: 88rpx;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+    color: #fff !important;
+    background: #f7f7f7 !important;
+    margin-bottom: 20px;
+}
+
+.i-btn-hover {
+    opacity: .9
+}
+
+.i-btn-long {
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none
+}
+
+.i-btn-large {
+    height: 88rpx;
+    line-height: 88rpx
+}
+
+.i-btn-small {
+    height: 80rpx;
+    line-height: 80rpx
+}
+
+.i-btn-primary {
+    background: #2d8cf0 !important
+}
+
+.i-btn-ghost {
+    background: #E3D2C8!important;
+}
+
+.i-btn-success {
+    box-shadow:0rpx 8rpx 20rpx rgba(0, 176, 56, .5) !important;
+    background:-webkit-linear-gradient( top,#00c742,#00b039) !important;
+}
+
+.i-btn-warning {
+    box-shadow:0rpx 8rpx 20rpx rgba(255, 146, 61, .5) !important;
+    background:-webkit-linear-gradient( top,#ffab43,#ff933e) !important;
+}
+
+.i-btn-error {
+    box-shadow:0rpx 8rpx 20rpx rgba(255, 83, 49, .5) !important;
+    background:-webkit-linear-gradient( top,#ff7b39,#ff5331) !important;
+}
+
+.i-btn-info {
+    background: #2db7f5 !important
+}
+
+.i-btn-large.i-btn-circle {
+    border-radius: 88rpx
+}
+
+.i-btn-small.i-btn-circle {
+    border-radius: 80rpx
+}
+
+.i-btn-loading {
+    opacity: .6
+}
+
+.i-btn-loading-inner {
+    display: inline-block;
+    margin-right: 12px;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    background: 0 0;
+    border-radius: 50%;
+    border-color: #fff #fff #fff transparent;
+    animation: btn-spin .6s linear;
+    animation-iteration-count: infinite
+}
+
+.i-btn-disabled {
+    background: #EEEEEE !important;
+    color:#666666 !important;
+    box-shadow: none !important;
+}
+
+.i-btn-inline {
+    display: inline-block
+}
+
+@keyframes btn-spin {
+    0% {
+        transform: rotate(0)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}

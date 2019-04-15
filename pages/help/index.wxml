@@ -1,0 +1,39 @@
+<!-- 底层背景 -->
+<view class="bg">
+  <image src="../../images/common/detailbg@2x.jpg" mode="widthFix"></image>
+</view>
+<!-- BANNER -->
+<view class='box banner-box'>
+  <banner imgUrl="../../../images/temporary/test.jpg" bannerTitle="肯德基全家桶30元优惠券"></banner>
+</view> 
+<!-- 进度条 -->
+<view class="box" wx:if="{{!isHelp}}">
+  <progress-bar percent="45" targetTime="1575400413838"></progress-bar>
+</view>
+<!-- 按钮组 -帮忙加戳(暂没有帮忙) -->
+<view class='box btn-box' wx:if="{{!isHelp}}">
+  <i-button bind:click="helpClick" type="error" shape="circle" size="large">帮TA加戳</i-button>
+  <i-button bind:click="handleClick" type="warning" shape="circle" size="large">邀请好友帮TA</i-button>
+  <i-button bind:click="handleClick" type="success" shape="circle" size="large">我也要哇宝</i-button>
+</view>
+<!-- qrcode -->
+<view class='qrcode-box' wx:if="{{isHelp}}">
+  <qrcode text="https://github.com/tomfriwel/weapp-qrcode" width="400" height="400" bg="#ffffff" color="#ff0000"></qrcode>
+</view>
+<!-- 按钮组 -帮忙加戳(已经帮忙) -->
+<view class='box btn-box' wx:if="{{isHelp}}">
+  <i-button type="error" open-type="share" shape="circle" size="large">邀请好友哇宝</i-button>
+  <i-button type="warning" open-type="share" shape="circle" size="large">转赠好友</i-button>
+  <i-button type="ghost" shape="circle" size="large">放弃宝贝</i-button>
+</view>
+<!-- 朋友加戳 -->
+<view wx:if="{{!isHelp}}">
+  <friends-stamp></friends-stamp>
+</view>
+<!-- 使用说明 -->
+<view class='box explain-box'>
+  <view>使用说明：</view>
+  <view>这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明这是使用说明</view>
+</view>
+<!-- 推荐宝物 -->
+<recommend></recommend>

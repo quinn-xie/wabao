@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "哇宝首页",
+  "usingComponents": {
+    "my-coins": "../../components/my-coins/my-coins",
+    "tips-icon": "../../components/common/tips/tips",
+    "toolbar": "../../components/toolbar/toolbar",
+    "swiper-text":"../../components/swiper-text/swiper-text",
+    "notice-bar":"../../components/common/notice-bar/notice-bar",
+    "my-treasure":"../../components/my-treasure/my-treasure",
+    "i-modal": "../../components/common/modal/index",
+    "list-item": "../../components/common/list-item/index"
+  }
+}

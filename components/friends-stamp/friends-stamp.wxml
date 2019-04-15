@@ -1,0 +1,18 @@
+<view class='friends-stamp'>
+  <view class='title'><image src='../../images/common/friends-stamp-title@2x.png' mode='widthFix'></image></view>
+  <view class='sub-title'>已有85个好友帮忙加戳</view>
+  <scroll-view scroll-y style="height:350px;" scroll-with-animation>
+    <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+  <list-item typeC leftIconC="../../../images/temporary/touxiang.jpg" leftNumC="我是一只鱼" rightIconC="../../../images/common/friends-stamp-icon.png"></list-item>
+
+
+  </scroll-view>
+</view>

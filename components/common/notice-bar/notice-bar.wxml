@@ -1,0 +1,7 @@
+<view wx:if="{{show}}" class="i-class i-noticebar">
+    <view class="i-noticebar-content-wrap">
+        <view class="i-noticebar-content {{loop?'i-noticebar-content-loop':''}}" animation="{{ animationData }}">
+           <slot></slot>
+        </view>
+    </view>
+</view>

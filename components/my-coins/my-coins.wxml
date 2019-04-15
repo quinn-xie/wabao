@@ -1,0 +1,55 @@
+<!-- js格式化数字每隔三位加逗号 -->
+<wxs module="threeNum" src="../../utils/num-format.wxs"></wxs>
+<!-- 用户金币信息组件 -->
+<view class="my-coins">
+  <!-- 我的金币  -->
+  <view class='coin-box' bindtap='coinPopOpen'>
+    <image class='title' mode='widthFix' src='../../images/temporary/coins-title.png'></image>
+    <view class='quantity'>
+      <image class='coins' mode='widthFix' src='../../images/common/jinbi@2x.png'></image>
+      {{threeNum.numFormat(myCoins)}}
+    </view>
+  </view>
+  <!-- 我的矿石  -->
+  <view class='coin-box' bindtap='orePopOpen'>
+    <image class='title' mode='widthFix' src='../../images/temporary/ore-title.png'></image>
+    <view class='quantity'>
+      <image class='ore' mode='widthFix' src='../../images/common/baoshi@2x.png'></image>
+      {{threeNum.numFormat(myOre)}}
+    </view>
+  </view>
+  <!-- 挖宝区在线人数:  -->
+  <view class='statistics'>挖宝区在线人数: {{threeNum.numFormat(digOnline)}}</view>
+  <!-- 在线总人数:  -->
+  <view class='statistics'>在线总人数: {{threeNum.numFormat(totalOnline)}}</view>
+  <!-- 用户信息 -->
+  <view class='userinfo'>
+    <view class="userinfo-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="userinfo-nickname">
+      <open-data type="userNickName"></open-data>
+    </view>
+  </view>
+
+</view>
+
+<!-- 宝石弹出层 -->
+<i-modal visible="{{ oreVisible }}" slotHeight="580" titleTitleStyleA titlebg="../../../images/common/baoshiPopTitleBg@2x.png" title="132313">
+  <view class='popContent'>
+      <list-item typeB leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x100" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="800"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x200" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="1500"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x500" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="3500"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x1000" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="5000"></list-item>
+  </view>
+</i-modal>
+
+<!-- 金币弹出层 -->
+<i-modal visible="{{ coinVisible }}" slotHeight="580" titleTitleStyleA titlebg="../../../images/common/jinbiPopTitleBg@2x.png" title="132313">
+  <view class='popContent'>
+      <list-item typeB leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x2" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="60"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x4" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="150"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x6" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="250"></list-item>
+      <list-item typeB leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x8" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="350"></list-item>
+  </view>
+</i-modal>

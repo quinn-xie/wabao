@@ -1,0 +1,12 @@
+<view class='recommend'>
+  <view class='title'><i-divider content="推荐宝物" color="#944509" lineColor="#944509"></i-divider></view>
+  <view>
+    <i-cardc ticketId="1" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg"></i-cardc>
+  </view>
+  <view>
+    <i-cardc ticketId="2" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg"></i-cardc>
+  </view>
+  <view>
+    <i-cardc ticketId="3" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg"></i-cardc>
+  </view>
+</view>

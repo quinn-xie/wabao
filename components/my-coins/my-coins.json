@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-modal": "../common/modal/index",
+    "list-item":"../common/list-item/index"
+  }
+}

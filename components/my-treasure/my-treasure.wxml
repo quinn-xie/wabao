@@ -1,0 +1,58 @@
+<view class='my-treasures'>
+  <i-tabs current="{{current}}" bindchange="handleChange">
+      <i-tab key="getting" title="获取中"></i-tab>
+      <i-tab key="got" title="已获得"></i-tab>
+      <i-tab key="more" title="更多"></i-tab>
+  </i-tabs>
+  <scroll-view scroll-y style="height:{{scrollAreaHeight}}px;" bindscrolltoupper="upperRefresh" scroll-with-animation bindscrolltolower="lowerLoadingMore" scroll-top="{{scrollTop}}">
+    <!-- 获取中 -->
+    <view wx:if="{{current == 'getting'}}">
+      <view bindTap="toDetails">
+        <i-carda ticketId="1" title="星巴克30ss元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      </view>
+      <i-carda ticketId="2" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="3" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="4" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="5" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="6" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="7" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="8" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="9" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="10" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="11" title="星巴克30元优惠券" targetTime="1575244602224" percent="75" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+      <i-carda ticketId="12" title="星巴克asfawfe元优惠券" targetTime="1555006027790"  percent="100" thumb="../../../images/temporary/test.jpg">
+      </i-carda>
+    </view>
+    <!-- 已获得 -->
+    <view wx:if="{{current == 'got'}}">
+        <i-cardb ticketId="1" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20" thumb="../../../images/temporary/test.jpg">
+        </i-cardb>
+        <i-cardb ticketId="2" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20"  thumb="../../../images/temporary/test.jpg">
+        </i-cardb>
+        <i-cardb ticketId="3" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20"  thumb="../../../images/temporary/test.jpg">
+        </i-cardb>
+    </view>
+    <!-- 更多 -->
+    <view wx:if="{{current == 'more'}}">
+        <i-cardc ticketId="1" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg">
+        </i-cardc>
+        <i-cardc ticketId="2" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg">
+        </i-cardc>
+        <i-cardc ticketId="3" title="星巴克asfawfe元优惠券" needCost="30"  thumb="../../../images/temporary/test.jpg">
+        </i-cardc>
+         <i-cardc ticketId="4" title="星巴克asfawfe元优惠券" needCost="90"  thumb="../../../images/temporary/test.jpg" available>
+        </i-cardc>
+    </view>
+  </scroll-view>
+</view>

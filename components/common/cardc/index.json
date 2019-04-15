@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-progress": "../progress/index",
+    "i-count-down": "../count-down/index"
+  }
+}

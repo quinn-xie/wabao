@@ -1,0 +1,35 @@
+<view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+    <view class="i-class i-card-header" bindtap='toDetails'>
+        <view class="i-card-header-content">
+            <image class="i-card-header-thumb" src="{{ thumb }}" mode="widthFit" wx:if="{{ thumb }}" />
+            <view class='i-card-header-title'>
+                <view class='i-card-title'>{{title}}</view>
+                <!-- 倒计时未完成或是进度未完成 -->
+                <view class='i-card-subtitle' wx:if="{{!succeed||status}}">
+                  任务截止时间:
+                  <i-count-down target="{{targetTime}}" clear-timer="{{clearTimer}}" bindcallback="myLinsterner"></i-count-down>
+                </view>
+                <!-- 倒计时完成并且进度已完成 -->
+                <view class='i-card-subtitle-deadline' wx:if="{{succeed&&!status}}">
+                    领取剩余时间:
+                  <i-count-down target="{{targetTime}}" clear-timer="{{clearTimer}}" bindcallback="myLinsterner"></i-count-down>
+                </view>
+            </view>
+        </view>
+        <!-- 倒计时未完成 -->
+        <view class="i-card-header-extra" wx:if="{{status}}">
+          <view>获得进度 {{percent}}/100</view>
+          <i-progress percent="{{percent}}" hide-info></i-progress>
+        </view>
+        <!-- 倒计时已完成 -->
+        <view class="i-card-header-extra" wx:if="{{!status}}">
+          <!-- 进度已完成 -->
+          <view wx:if="{{succeed}}">
+            <view class='giveupBtn' catchtap='onTapGiveup'>放弃</view>
+            <view class='receiveBtn' catchtap='onTapReceive'>领取</view>
+          </view>
+          <!-- 进度未完成 -->
+          <view class='unfinished' wx:if="{{!succeed}}">使命未完成</view>
+        </view>
+    </view>
+</view>

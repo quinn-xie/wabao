@@ -1,0 +1,16 @@
+// js格式化数字每隔三位加逗号
+var threeNum = {
+  numFormat: function (num) {
+    var num = (num || 0).toString();
+    var result = '';
+    while (num.length > 3) {
+      result = ',' + num.slice(-3) + result;
+      num = num.slice(0, num.length - 3);
+    }
+    if (num) { result = num + result; }
+    return result;
+  }
+}
+module.exports = {
+  numFormat: threeNum.numFormat
+}

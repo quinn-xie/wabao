@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#ff9f58",
+  "navigationBarTitleText": "帮忙加戳",
+  "usingComponents": {
+    "i-button":"../../components/common/button/index",
+    "banner": "../../components/common/banner/index",
+    "recommend": "../../components/recommend/recommend",
+    "friends-stamp":"../../components/friends-stamp/friends-stamp",
+    "progress-bar": "../../components/progress-bar/progress-bar",
+    "qrcode":"../../components/common/qrcode/index"
+  }
+}
