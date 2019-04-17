@@ -12,7 +12,7 @@
         </view>
         <!--  -->
         <view class="i-card-header-extra">
-          <view class='receiveBtn' wx:if="{{!available}}" bindtap='onTapView'>兑换</view>
+          <view class='receiveBtn' wx:if="{{!available}}" catchtap='onTapView'>兑换</view>
           <view class='unreceiveBtn' wx:if="{{available}}">兑换</view>
         </view>
     </view>

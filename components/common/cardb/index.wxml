@@ -12,7 +12,7 @@
         </view>
         <!--  -->
         <view class="i-card-header-extra">
-          <view class='receiveBtn' bindtap='onTapView'>查看</view>
+          <view class='receiveBtn' catchtap='onTapView'>查看</view>
         </view>
     </view>
 </view>

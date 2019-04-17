@@ -1,9 +1,11 @@
+import apiList from "../../utils/http.js"
+const api = require('../../utils/api.js') 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    animationTime: 2,//矿工挖矿速度值 越小越快
+    animationTime: 5,//矿工挖矿速度值 越小越快
     messageNum: 12,//消息数量
     messageNumShow: true,//消息数量是否显示
     jiasuNum: 33,//加速铲子数量
@@ -21,6 +23,8 @@ Page({
   },
 
   onLoad: function (options) {
+    // 测试
+    this.baoList();
     // 获取手机屏幕高度赋值给我的宝库详情
     let _this = this;
     wx.getSystemInfo({
@@ -77,5 +81,18 @@ Page({
         })
       }
     }
+  },
+  /*
+  * 测试接口
+  */
+  baoList:function(){
+    let _this = this;
+    let params = { page:'1', pageSize:'10',type:'2' }
+    api.post(apiList.member.baolist, params).then(res => {
+      console.log(res)
+      _this.setData({
+        jiasuNum:res.code
+      })
+    })
   }
 })

@@ -12,8 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
-	"appid": "wx3d90859c73802288",
-	"projectname": "wabao",
+	"appid": "wx632e703a4d0a8aef",
+	"projectname": "miniprogram-wabao",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
