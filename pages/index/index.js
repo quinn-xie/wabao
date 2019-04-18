@@ -1,5 +1,5 @@
 import apiList from "../../utils/http.js"
-const api = require('../../utils/api.js') 
+const api = require("../../utils/api.js") 
 Page({
   /**
    * 页面的初始数据
@@ -37,7 +37,7 @@ Page({
     })
   },
   /**
-   * 点击上拉加载我的宝库
+   * 点击上拉箭头加载我的宝库
    */
   showTreasure() {
     let _this = this;
@@ -46,6 +46,16 @@ Page({
       myTreasureBottom: _this.data.myTreasureBottom,
       treasureArrowUp:false
     })
+  },
+  /**
+   * 点击加速小公仔速度加快
+   */
+  toyMoveFaster() {
+    let _this = this;
+    _this.setData({
+      animationTime: 1
+    })
+    console.log("哇宝公仔加速啦")
   },
   /**
    * 点击收起我的宝库

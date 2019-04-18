@@ -11,7 +11,7 @@ const request = (url, options) => {
       data: options.method === 'GET' ? options.data : JSON.stringify(options.data),
       header: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        // 'x-token': 'x-token'  // 看自己是否需要
+        'token': '888'  // 看自己是否需要
       },
       success(res) {
         if (res.statusCode == 200) {

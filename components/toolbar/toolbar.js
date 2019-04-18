@@ -28,7 +28,8 @@ Component({
       console.log("矿山被点击了")
     },
     jiasuTap(event) {
-      console.log("加速被点击了")
+      console.log("点击了加速")
+      this.triggerEvent('toyMoveFaster') 
     },
     serviceTap(event) {
       console.log("客服被点击了")

@@ -38,7 +38,7 @@
 </view>
 <!-- 右侧工具栏 -->
 <view class='toolbar'>
-  <toolbar messageNum="{{messageNum}}" messageNumShow="{{messageNumShow}}" jiasuNum="{{jiasuNum}}" jiasuNumShow="{{jiasuNumShow}}" kuangshanNum="{{kuangshanNum}}"></toolbar>
+  <toolbar messageNum="{{messageNum}}" messageNumShow="{{messageNumShow}}" jiasuNum="{{jiasuNum}}" jiasuNumShow="{{jiasuNumShow}}" kuangshanNum="{{kuangshanNum}}" bind:toyMoveFaster="toyMoveFaster"></toolbar>
 </view>
 
 <!-- 离线收益弹出层 -->
