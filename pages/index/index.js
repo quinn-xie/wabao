@@ -21,7 +21,6 @@ Page({
     outlinePop:false,
     couponPopShow:false
   },
-
   onLoad: function (options) {
     // 测试
     this.baoList();
