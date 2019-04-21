@@ -59,21 +59,22 @@
   background:-webkit-linear-gradient( top,#CD7116,#B56414);
   position:relative;
 }
-.i-modal-title image{
+.i-modal-title-image{
   width:58rpx;
   position: absolute;
   right:20rpx;
   top:20rpx;
 }
 
-.titleWithBg image{
+.titleWithBg-image{
   width:250rpx;
   position:absolute;
   left:20rpx;
 }
-.titleWithBg text{
+.titleWithBg-text{
   position:absolute;
   left:100rpx;
+  top:50rpx;
   font-size:24rpx;
 }
 

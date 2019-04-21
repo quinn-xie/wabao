@@ -8,15 +8,6 @@
   overflow: hidden;
 }
 
-.i-noticebar-icon {
-  display: flex;
-  margin-left: 30rpx;
-  align-items: center;
-}
-
-.i-noticebar-icon+view {
-  margin-left: 10rpx;
-}
 
 .i-noticebar-operation {
   display: flex;

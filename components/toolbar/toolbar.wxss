@@ -2,10 +2,7 @@
   width:200rpx;
   position: absolute;
 }
-.toolbar image{
-  width:100%;
-}
-.toolbar tips-icon{
+.toolbar-tips-icon{
   position: absolute;
   top:20rpx;
   right:30rpx
@@ -16,7 +13,7 @@
 .kuangshan{
   top:160rpx;
 }
-.kuangshan text{
+.kuangshan-text{
   position: absolute;
   top:36rpx;
   right:36rpx;
@@ -29,6 +26,6 @@
 .kefu{
   top:480rpx;
 }
-.kuangshan image{
+.kuangshan-image{
   width:117%
 }

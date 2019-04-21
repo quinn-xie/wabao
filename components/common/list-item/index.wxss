@@ -12,7 +12,7 @@
   height:0;
   visibility:hidden;
 }
-.type-a image{
+.type-a-image{
   width:60rpx;
   float:left
 }
@@ -30,7 +30,7 @@
   font-size: 28rpx;
   vertical-align: middle;
 }
-.type-b .left image{
+.type-b .left-image{
   width:50rpx;
   vertical-align: middle;
   margin-right:20rpx
@@ -45,7 +45,7 @@
   color:#ffffff;
   font-size: 28rpx;
 }
-.type-b .right image{
+.type-b .right-image{
   width:38rpx;
   vertical-align: middle;
 }
@@ -60,7 +60,7 @@
   font-size: 24rpx;
   vertical-align: middle;
 }
-.type-c .left image{
+.type-c .left-image{
   width:66rpx;
   vertical-align: middle;
   margin-right:20rpx;
@@ -69,7 +69,7 @@
 .type-c .right{
   float: right;
 }
-.type-c .right image{
+.type-c .right-image{
   width:104rpx;
   margin-right:40rpx;
   vertical-align: middle;

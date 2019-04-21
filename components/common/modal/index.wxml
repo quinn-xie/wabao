@@ -3,10 +3,10 @@
   <view class="i-modal-main">
     <view class="i-modal-content">
       <view class="i-modal-title" wx:if="{{ titleTitleStyleA }}">
-        <image src="../../../images/common/cancelIcon@2x.png" mode="widthFix" bindtap="modalClose"></image>
+        <image class="i-modal-title-image" src="../../../images/common/cancelIcon@2x.png" mode="widthFix" bindtap="modalClose"></image>
         <view class="titleWithBg">
-          <image src="{{titlebg}}" mode='widthFix'></image>
-          <text>{{title}}</text>
+          <image class="titleWithBg-image" src="{{titlebg}}" mode='widthFix'></image>
+          <text class="titleWithBg-text">{{title}}</text>
         </view>
       </view>
       <view class="i-modal-title" wx:if="{{ titleTitleStyleB }}">

@@ -1,26 +1,26 @@
 <!-- 类似首页离线收益弹窗ITEM样式A -->
 <view class='list-item type-a' wx:if="{{ typeA }}">
-  <image src='{{iconA}}' mode='widthFix'></image>
+  <image class='type-a-image' src='{{iconA}}' mode='widthFix'></image>
   <view class='content'>{{numA}}</view>
 </view>
 <!-- 弹窗ITEM样式B -->
 <view class='list-item type-b' wx:if="{{ typeB }}">
   <view class='left'>
-    <image src='{{leftIconB}}' mode='widthFix'></image>
+    <image class='left-image' src='{{leftIconB}}' mode='widthFix'></image>
     {{leftNumB}}
   </view>
   <view class='right'>
-    <image src='{{rightIconB}}' mode='widthFix'></image>
+    <image class='right-image' src='{{rightIconB}}' mode='widthFix'></image>
     {{rightNumB}}
   </view>
 </view>
 <!-- 弹窗ITEM样式B -->
 <view class='list-item type-c' wx:if="{{ typeC }}">
   <view class='left'>
-    <image src='{{leftIconC}}' mode='widthFix'></image>
+    <image class='left-image' src='{{leftIconC}}' mode='widthFix'></image>
     {{leftNumC}}
   </view>
   <view class='right'>
-    <image src='{{rightIconC}}' mode='widthFix'></image>
+    <image class='right-image' src='{{rightIconC}}' mode='widthFix'></image>
   </view>
 </view>

@@ -12,7 +12,7 @@
 </view>
 <!-- 我的金币矿石  -->
 <view class='my-info'>
-  <my-coins></my-coins>
+  <my-coins ifLogin="{{ifLogin}}" myCoins="{{myCoins}}" myOre="{{myOre}}" digOnline="{{digOnline}}" totalOnline="{{totalOnline}}" bind:infoGet="infoGet"></my-coins>
 </view>
 <!-- 滚动文字 -->
 <view class='scroll-text'>
@@ -34,7 +34,7 @@
       <my-treasure scrollAreaHeight="{{scrollAreaHeight}}"></my-treasure>
     </view>
   </view>
-
+    
 </view>
 <!-- 右侧工具栏 -->
 <view class='toolbar'>

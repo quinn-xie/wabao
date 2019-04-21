@@ -8,10 +8,10 @@ const request = (url, options) => {
     wx.request({
       url: url,
       method: options.method,
-      data: options.method === 'GET' ? options.data : JSON.stringify(options.data),
+      data: options.method === 'GET' ? options.data : options.data,
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'token': wx.getStorageSync("tokenId")  // 请求附上TOKEN
+        'Content-Type': 'application/x-www-form-urlencoded'
+        //'token': wx.getStorageSync("tokenId")  // 请求附上TOKEN
       },
       success(res) {
         if (res.statusCode == 200) {
