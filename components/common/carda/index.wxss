@@ -38,7 +38,7 @@
 }
 
 .i-card-header-title {
-  width: 330rpx;
+  width: 300rpx;
   display: inline-block;
   vertical-align: middle;
   font-size:32rpx;

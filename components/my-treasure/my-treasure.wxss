@@ -1,3 +1,10 @@
 .my-treasures{
   padding:0 50rpx;
 }
+.hasnodata{
+  margin-top:100rpx;
+}
+.hasnodata-text{
+  font-size: 24rpx;
+  color:rgba(148, 69, 9, .3)
+}

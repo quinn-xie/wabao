@@ -1,3 +1,5 @@
+<!-- js格式化数字每隔三位加逗号 -->
+<wxs module="threeNum" src="../../utils/num-format.wxs"></wxs>
 <!-- 底层背景 -->
 <view class='home-bg'>
   <image src="../../images/home/bg@2x.png" mode='widthFix'></image>
@@ -12,7 +14,41 @@
 </view>
 <!-- 我的金币矿石  -->
 <view class='my-info'>
-  <my-coins ifLogin="{{ifLogin}}" myCoins="{{myCoins}}" myOre="{{myOre}}" digOnline="{{digOnline}}" totalOnline="{{totalOnline}}" bind:infoGet="infoGet"></my-coins>
+  <!-- 用户金币信息组件 -->
+  <view class="my-coins">
+    <!-- 我的金币  -->
+    <view class='coin-box' bindtap='coinPopOpen'>
+      <image class='title' mode='widthFix' src='../../images/temporary/coins-title.png'></image>
+      <view class='quantity'>
+        <image class='coins' mode='widthFix' src='../../images/common/jinbi@2x.png'></image>
+        {{threeNum.numFormat(myCoins)}}
+      </view>
+    </view>
+    <!-- 我的矿石  -->
+    <view class='coin-box' bindtap='orePopOpen'>
+      <image class='title' mode='widthFix' src='../../images/temporary/ore-title.png'></image>
+      <view class='quantity'>
+        <image class='coins' mode='widthFix' src='../../images/common/baoshi@2x.png'></image>
+        {{threeNum.numFormat(myOre)}}
+      </view>
+    </view>
+    <!-- 挖宝区在线人数:  -->
+    <view class='statistics'>挖宝区在线人数: {{threeNum.numFormat(digOnline)}}</view>
+    <!-- 在线总人数:  -->
+    <view class='statistics'>在线总人数: {{threeNum.numFormat(totalOnline)}}</view>
+    <!-- 用户信息 -->
+    <view class='userinfo' wx:if="{{isLogin}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="userinfo-nickname">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+    <view class='userinfo' wx:else>
+      <button open-type="getUserInfo" bindgetuserinfo="isLogin">授权登录 </button>
+    </view>
+  </view>
 </view>
 <!-- 滚动文字 -->
 <view class='scroll-text'>
@@ -31,10 +67,10 @@
     </view>
     <text>我的宝库</text>
     <view class='my-treasure-content' style="height:{{myTreasureContentHeight}}px">
-      <my-treasure scrollAreaHeight="{{scrollAreaHeight}}"></my-treasure>
+      <my-treasure id="baolist" current="{{current}}" scrollAreaHeight="{{scrollAreaHeight}}"></my-treasure>
     </view>
   </view>
-    
+
 </view>
 <!-- 右侧工具栏 -->
 <view class='toolbar'>
@@ -43,7 +79,7 @@
 
 <!-- 离线收益弹出层 -->
 <i-modal visible="{{ outlinePop }}" slotHeight="580" titleTitleStyleB title="离线收益">
-  <view class='pop-content'>
+  <view class='pop-content' style="width:100%">
     <view class='outline-title'>欢迎回来！您的挖宝矿工在您离线期间，为您挖得:</view>
     <view class='list-item'>
       <list-item typeA iconA="../../../images/common/popIcon-kuangshi@2x.png" numA="9999"></list-item>
@@ -60,6 +96,26 @@
     <image class='close-icon' mode="widthFix" src="../../images/common/popIcon-close@2x.png" bindtap="closeCouponPop"></image>
     <image src="../../images/temporary/test.jpg" mode="widthFix"></image>
     <view class="title">肯德基全家桶30元优惠券 </view>
-    <view class="btn">立即领取</view>
+    <view class="btn" id="12313" bindtap='baoReceive'>立即领取</view>
   </view>
 </view>
+<!-- 宝石弹出层 -->
+<i-modal visible="{{ oreVisible }}" slotHeight="580" titleTitleStyleA titlebg="../../../images/common/baoshiPopTitleBg@2x.png" title="132313">
+  <view class='popContent'>
+    <list-item typeB id="1" leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x100" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="800" bindtap="coinToShovel"></list-item>
+    <list-item typeB id="2" leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x200" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="1500" bindtap="coinToShovel"></list-item>
+    <list-item typeB id="3" leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x500" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="3500" bindtap="coinToShovel"></list-item>
+    <list-item typeB id="4" leftIconB="../../../images/common/popIcon-jinbi@2x.png" leftNumB="x1000" rightIconB="../../../images/common/popIcon-kuangshi@2x.png" rightNumB="5000" bindtap="coinToShovel"></list-item>
+  </view>
+</i-modal>
+
+<!-- 金币弹出层 -->
+<i-modal visible="{{ coinVisible }}" slotHeight="580" titleTitleStyleA titlebg="../../../images/common/jinbiPopTitleBg@2x.png" title="132313">
+  <view class='popContent'>
+    <list-item typeB id="1" leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x2" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="60" bindtap="oreToCoin"></list-item>
+    <list-item typeB id="2" leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x4" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="150" bindtap="oreToCoin"></list-item>
+    <list-item typeB id="3" leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x6" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="250" bindtap="oreToCoin"></list-item>
+    <list-item typeB id="4" leftIconB="../../../images/common/popIcon-chanzi@2x.png" leftNumB="x8" rightIconB="../../../images/common/popIcon-jinbi@2x.png" rightNumB="350" bindtap="oreToCoin"></list-item>
+  </view>
+</i-modal>
+<i-toast id="toast" />

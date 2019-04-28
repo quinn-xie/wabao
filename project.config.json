@@ -8,13 +8,16 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.4",
+	"libVersion": "2.6.6",
 	"appid": "wx632e703a4d0a8aef",
 	"projectname": "miniprogram-wabao",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -33,13 +36,14 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 4,
+			"current": 0,
 			"list": [
 				{
-					"id": -1,
-					"name": "首页",
+					"id": 0,
+					"name": "哇宝首页",
 					"pathName": "pages/index/index",
-					"query": ""
+					"query": "",
+					"scene": null
 				},
 				{
 					"id": 1,
@@ -49,23 +53,24 @@
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "帮忙加戳",
 					"pathName": "pages/help/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 3,
 					"name": "充值激活",
 					"pathName": "pages/recharge/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 4,
 					"name": "实物宝贝",
 					"pathName": "pages/physical/index",
+					"query": "",
 					"scene": null
 				}
 			]

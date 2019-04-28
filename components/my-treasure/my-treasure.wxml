@@ -1,17 +1,24 @@
 <view class='my-treasures'>
   <i-tabs current="{{current}}" bindchange="handleChange">
-      <i-tab key="getting" title="获取中"></i-tab>
-      <i-tab key="got" title="已获得"></i-tab>
-      <i-tab key="more" title="更多"></i-tab>
+    <i-tab key="1" title="获取中"></i-tab>
+    <i-tab key="2" title="已获得"></i-tab>
+    <i-tab key="3" title="更多"></i-tab>
   </i-tabs>
   <scroll-view scroll-y style="height:{{scrollAreaHeight}}px;" bindscrolltoupper="upperRefresh" scroll-with-animation bindscrolltolower="lowerLoadingMore" scroll-top="{{scrollTop}}">
     <!-- 获取中 -->
-    <view wx:if="{{current == 'getting'}}">
-      <view bindTap="toDetails">
-        <i-carda ticketId="1" title="星巴克30ss元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
-      </i-carda>
+    <view wx:if="{{current == '1'}}">
+      <block wx:if="{{hasNoData}}">
+        <view class='hasnodata'>
+            <text class='hasnodata-text'>未找到相关数据</text>
+        </view>
+      </block>
+      <block wx:else>
+      <view bindTap="toDetails" wx:for="{{baoList}}" wx:key="{{item.id}}">
+        <i-carda ticketId="{{item.id}}" title="{{item.name}}" targetTime="15589728000000" percent="{{item.finishNumber/item.totalNumber*100}}" thumb="{{item.smallpicUrl}}">
+        </i-carda>
       </view>
-      <i-carda ticketId="2" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
+      </block>
+      <!-- <i-carda ticketId="2" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
       </i-carda>
       <i-carda ticketId="3" title="星巴克30元优惠券" targetTime="1555008985159" percent="75" thumb="../../../images/temporary/test.jpg">
       </i-carda>
@@ -32,27 +39,36 @@
       <i-carda ticketId="11" title="星巴克30元优惠券" targetTime="1575244602224" percent="75" thumb="../../../images/temporary/test.jpg">
       </i-carda>
       <i-carda ticketId="12" title="星巴克asfawfe元优惠券" targetTime="1555006027790"  percent="100" thumb="../../../images/temporary/test.jpg">
-      </i-carda>
+      </i-carda> -->
     </view>
     <!-- 已获得 -->
-    <view wx:if="{{current == 'got'}}">
-        <i-cardb ticketId="1" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20" thumb="../../../images/temporary/test.jpg">
-        </i-cardb>
-        <i-cardb ticketId="2" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20"  thumb="../../../images/temporary/test.jpg">
-        </i-cardb>
-        <i-cardb ticketId="3" title="星巴克asfawfe元优惠券" startDate="2019.02.08" endDate="2019.06.20"  thumb="../../../images/temporary/test.jpg">
-        </i-cardb>
+    <view wx:if="{{current == '2'}}">
+      <block wx:if="{{hasNoData}}">
+        <view class='hasnodata'>
+            <text class='hasnodata-text'>未找到相关数据</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view bindTap="toDetails" wx:for="{{baoList}}" wx:key="{{item.id}}">
+            <i-cardb ticketId="{{item.id}}" title="{{item.name}}" startDate="{{item.createTime}}" endDate="1555310015000" thumb="{{item.smallpicUrl}}">
+           </i-cardb>
+        </view>
+      </block>
     </view>
     <!-- 更多 -->
-    <view wx:if="{{current == 'more'}}">
-        <i-cardc ticketId="1" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg">
-        </i-cardc>
-        <i-cardc ticketId="2" title="星巴克asfawfe元优惠券"  needCost="30" thumb="../../../images/temporary/test.jpg">
-        </i-cardc>
-        <i-cardc ticketId="3" title="星巴克asfawfe元优惠券" needCost="30"  thumb="../../../images/temporary/test.jpg">
-        </i-cardc>
-         <i-cardc ticketId="4" title="星巴克asfawfe元优惠券" needCost="90"  thumb="../../../images/temporary/test.jpg" available>
-        </i-cardc>
+    <view wx:if="{{current == '3'}}">
+      <block wx:if="{{hasNoData}}">
+        <view class='hasnodata'>
+            <text class='hasnodata-text'>未找到相关数据</text>
+        </view>
+      </block>
+      <block wx:else>
+        <view bindTap="toDetails" wx:for="{{baoList}}" wx:key="{{item.id}}">
+            <i-cardc ticketId="{{item.id}}" title="{{item.name}}" needCost="{{item.needGoldcoinNumber}}" thumb="{{item.smallpicUrl}}">
+            <!-- <i-cardc ticketId="{{item.id}}" title="{{item.name}}" needCost="{{item.needGoldcoinNumber}}" thumb="{{item.smallpicUrl}}" available> -->
+           </i-cardc>
+        </view>
+      </block>
     </view>
   </scroll-view>
 </view>

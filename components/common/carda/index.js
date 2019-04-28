@@ -1,3 +1,7 @@
+import apiList from "../../../utils/http.js"
+const api = require("../../../utils/api.js")
+const tokenId = wx.getStorageSync('tokenId')
+const { $Toast } = require('../base/index');
 Component({
     data: {
       
@@ -23,10 +27,36 @@ Component({
         }
       },
       onTapGiveup(e){
-        console.log("打算放弃了" + this.data.ticketId)
+        let _this = this;
+        let baoId = this.data.ticketId
+        let pramas = { token: tokenId, baoId: baoId }
+        api.post(apiList.bao.baoGiveup, pramas).then(res => {
+          if (res.code == 200) {
+            _this.setData({
+              couponPopShow: false
+            });
+            $Toast({
+              content: res.message,
+              type: 'success'
+            });
+          }
+        })
       },
       onTapReceive(){
-        console.log("正准备收下" + this.data.ticketId)
+        let _this = this;
+        let baoId = this.data.ticketId
+        let pramas = { token: tokenId, baoId: baoId }
+        api.post(apiList.bao.baoReceive, pramas).then(res => {
+          console.log(res.message)
+          if (res.code == 200) {
+            _this.setData({
+              couponPopShow: false
+            });
+            $Toast({
+              content: res.message
+            });
+          }
+        })
       },
       toDetails() {
         console.log(this.data.ticketId+'被点击了')

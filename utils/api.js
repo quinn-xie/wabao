@@ -1,17 +1,13 @@
 const app = getApp()
 const request = (url, options) => {
-  wx.showLoading({
-    title: "数据加载中...",
-    icon: "loading"
-  });
   return new Promise((resolve, reject) => {
     wx.request({
       url: url,
       method: options.method,
       data: options.method === 'GET' ? options.data : options.data,
       header: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-        //'token': wx.getStorageSync("tokenId")  // 请求附上TOKEN
+        'Content-Type': 'application/x-www-form-urlencoded',
+        // 'token': wx.getStorageSync("tokenId")  // 请求附上TOKEN
       },
       success(res) {
         if (res.statusCode == 200) {
@@ -23,7 +19,7 @@ const request = (url, options) => {
       fail(error) {
         reject(error.data)
       },
-      complete: function (res) {
+      complete(res) {
         wx.hideLoading(); //隐藏loading
       }
     })

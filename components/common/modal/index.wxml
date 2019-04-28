@@ -10,7 +10,7 @@
         </view>
       </view>
       <view class="i-modal-title" wx:if="{{ titleTitleStyleB }}">
-        <image src="../../../images/common/cancelIcon@2x.png" mode="widthFix" bindtap="modalClose"></image>
+        <image  class="i-modal-title-image"  src="../../../images/common/cancelIcon@2x.png" mode="widthFix" bindtap="modalClose"></image>
         <view class="titleWithNoBg">
           {{title}}
         </view>

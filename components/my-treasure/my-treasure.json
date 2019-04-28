@@ -6,5 +6,6 @@
     "i-carda": "../common/carda/index",
     "i-cardb": "../common/cardb/index",
     "i-cardc": "../common/cardc/index"
-  }
+  },
+  "enablePullDownRefresh": true
 }

@@ -21,7 +21,7 @@ const apiList = {
     baoAddstamp: baseUrl + '/bao/addstamp',
     // 转增宝物
     baoExchange: baseUrl + '/bao/exchange',
-    // 领取宝物
+    // 放弃宝物
     baoGiveup: baseUrl + '/bao/giveup',
     // 领取宝物
     baoReceive: baseUrl + '/bao/receive'
